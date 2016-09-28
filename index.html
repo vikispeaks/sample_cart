@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"> </head>
+
+<body>
+    <div class="container">
+        <h1 class="cart--header font--dark">Your Shopping Bag</h1>
+        <table id="cart" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:70%"><span id="item-nos"></span> Items</th>
+                    <th style="width:10%"
+                    class="text-center">SIZE</th>
+                    <th style="width:10%" class="text-center">QTY</th>
+                    <th style="width:10%" class="text-center">PRICE</th>
+                </tr>
+            </thead>
+            <tbody id="cart-content"> </tbody>
+        </table>
+        <div class="row cart--summary">
+            <div class="col-xs-4 cart--summary--help">
+                <p>Need help or have Questions</p>
+                <p class="font--light">Call customer care at <a href="tel:18005555555">1800-555-5555</a>                    </p>
+                <p class="font--light">Chat with one of our stylists</p>
+                <p class="font--light">See return &amp; exchange policy</p>
+            </div>
+            <div class="col-xs-8 cart--summary--content">
+                <div class="row cart--summary--code"> <span class="col-xs-6 font--light">Enter promotion code or gift card</span>
+                    <div class="col-xs-3">
+                        <input type="text" class="form-control"> </div>
+                    <button class="btn btn-default col-xs-3" type="button">Apply</button>
+                </div>
+                <ul>
+                    <li class="row">
+                        <p class="col-xs-8">Subtotal</p>
+                        <p id="totalPrice" class="col-xs-4"></p>
+                    </li>
+                    <li class="row">
+                        <p class="col-xs-8">Promotion code JF10 applied</p>
+                        <p id="discountPrice" class="col-xs-4"></p>
+                    </li>
+                    <li class="row">
+                        <p class="col-xs-8">Estimated Shipping<sup>*</sup> </p>
+                        <p class="col-xs-4">FREE</p>
+                        <p class="col-xs-8 font--light">You don't qualify for free shipping as your order is below
+                            $550</p>
+                    </li>
+                    <li class="row">
+                        <p class="col-xs-8">Estimated total</p>
+                        <p id="estimatedPrice" class="col-xs-4"></p>
+                        <p class="col-xs-8 font--light">Tax will be applied during checkout</p>
+                    </li>
+                </ul>
+                <p class="cart--summary--checkout"> <a href="#">Continue Shopping</a>
+                    <button class="btn btn-default"
+                    type="button">Checkout</button>
+                </p>
+                <p class="font--light row cart--summary--secure"> <img src="assets/lock.jpg" alt="..." class="img-responsive" /> <span>Secure Checkout. Shopping is always safe &amp; secure</span>                    </p>
+            </div>
+        </div>
+        <div class="modal fade" id="editModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-xs-6">
+                            <h3 id="item-name">Printed Shirt</h3>
+                            <h1 id="item-price">$39</h1>
+                            <div class="row">
+                                <select id="item-size-variant" class="col-xs-4"></select>
+                                <select class="col-xs-4">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-default" type="button">Edit</button>
+                            <p><a href="#">See Product details</a></p>
+                        </div>
+                        <div class="col-xs-6"> <img id="item-image" src="" alt="..." class="img-responsive" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

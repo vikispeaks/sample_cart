@@ -1,106 +1,119 @@
 body {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-
 ul {
-  padding:0;
-  margin:0;
+    padding: 0;
+    margin: 0;
 }
 ul li {
-  list-style-type: none;
+    list-style-type: none;
 }
-
 h1 {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
-
 a {
-  color: #999;
-  text-decoration: underline;
+    color: #999;
+    text-decoration: underline;
 }
-
-input[type=text], input[type=number], .btn {
+input[type=text],
+input[type=number],
+.btn {
     border-radius: 0px;
 }
-
 .font--dark {
-  color: #666666;
+    color: #666666;
 }
-
 .font--light {
-  color: #999999;
+    color: #999999;
 }
-
 .cart--header {
-  padding-bottom: 75px;
-  border-bottom: 2px solid #ccc;
+    padding-bottom: 75px;
+    border-bottom: 2px solid #ccc;
 }
-.item--action span{
-  cursor: pointer;
+.item--action span {
+    cursor: pointer;
 }
-
+.item--size,
+.item--price {
+    text-align: center;
+}
 .table {
-  border-bottom: 7px solid #ccc;
+    border-bottom: 7px solid #ccc;
 }
-
 .table>thead {
-  border-bottom: 7px solid #ccc;
+    border-bottom: 7px solid #ccc;
 }
 .table>tbody>tr>td {
     vertical-align: middle;
     text-transform: uppercase;
 }
-
-.table>tbody>tr>td div.row{
+.table>tbody>tr>td div.row {
     padding: 10px;
 }
-
 .cart--summary--code {
     padding: 20px 0;
 }
-
 .cart--summary--content ul {
     border-top: 5px solid #ccc;
     border-bottom: 5px solid #ccc;
 }
-
 .cart--summary--content ul li {
     padding: 10px 0;
 }
-
 .cart--summary--checkout {
     text-align: right;
     padding: 20px 0;
 }
-
 .cart--summary--checkout .btn {
-  background-color: #4078C0;
-  color: #fff;
+    background-color: #4078C0;
+    color: #fff;
 }
-
 .cart--summary--secure {
     text-align: right;
 }
-
-.cart--summary--secure img{
+.cart--summary--secure img {
     display: inline;
 }
-
-.modal-body div{
-  text-align: center;
+.modal-body div {
+    text-align: center;
+    text-transform: uppercase;
 }
-
+.modal-body img {
+    display: inline-block;
+    text-align: center;
+}
+.modal-body select {
+    margin: 20px;
+    text-transform: uppercase;
+}
+.modal-body button {
+  margin-bottom: 15px;
+  background-color: #89D9D0;
+}
 @media screen and (max-width: 600px) {
-    table#cart tbody td .form-control{
-		width:20%;
-		display: inline !important;
-	}
-
-	table#cart thead { display: none; }
-	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
-	table#cart tbody td:before {
-		content: attr(data-th); font-weight: bold;
-		display: inline-block; width: 8rem;
-	}
-
+    table#cart tbody td .form-control {
+        width: 20%;
+        display: inline !important;
+    }
+    .item--size,
+    .item--price {
+        text-align: left;
+    }
+    table#cart thead {
+        display: none;
+    }
+    table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width: 320px;
+    }
+    table#cart tbody td img {
+        display: inline-block;
+    }
+    table#cart tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 8rem;
+    }
 }
