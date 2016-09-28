@@ -19,73 +19,13 @@
         <table id="cart" class="table table-hover table-condensed">
             <thead>
                 <tr>
-                    <th style="width:70%">3 Items</th>
-                    <th style="width:10%">Size</th>
-                    <th style="width:10%">Qty</th>
-                    <th style="width:10%">Price</th>
+                    <th style="width:70%"><span id="item-nos"></span> Items</th>
+                    <th style="width:10%" class="text-center">Size</th>
+                    <th style="width:10%" class="text-center">Qty</th>
+                    <th style="width:10%" class="text-center">Price</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td data-th="3 Items">
-                        <div class="row">
-                            <div class="col-sm-2"><img src="assets/T1.jpg" alt="..." class="img-responsive"
-                                />
-                            </div>
-                            <div class="col-sm-10">
-                                <h4 class="nomargin font--dark">Rainbow printed Shirt</h4>
-                                <p>Style#: MSTN23456</p>
-                                <p>Colour: Grey</p>
-                                <p class="font--light"><span>Edit</span> | <span>x Remove</span> | <span>Save for Later</span></p>
-                            </div>
-                        </div>
-                    </td>
-                    <td data-th="Size">$1.99</td>
-                    <td data-th="Qty">
-                        <input type="number" class="form-control text-center" value="1">
-                    </td>
-                    <td data-th="Price" class="text-center">$1.99</td>
-                </tr>
-                <tr>
-                    <td data-th="3 Items">
-                        <div class="row">
-                            <div class="col-sm-2"><img src="assets/T1.jpg" alt="..." class="img-responsive"
-                                />
-                            </div>
-                            <div class="col-sm-10">
-                                <h4 class="nomargin font--dark">Rainbow printed Shirt</h4>
-                                <p>Style#: MSTN23456</p>
-                                <p>Colour: Grey</p>
-                                <p class="font--light"><span>Edit</span> | <span>x Remove</span> | <span>Save for Later</span></p>
-                            </div>
-                        </div>
-                    </td>
-                    <td data-th="Size">$1.99</td>
-                    <td data-th="Qty">
-                        <input type="number" class="form-control text-center" value="1">
-                    </td>
-                    <td data-th="Price" class="text-center">$1.99</td>
-                </tr>
-                <tr>
-                    <td data-th="3 Items">
-                        <div class="row">
-                            <div class="col-sm-2"><img src="assets/T1.jpg" alt="..." class="img-responsive"
-                                />
-                            </div>
-                            <div class="col-sm-10">
-                                <h4 class="nomargin font--dark">Rainbow printed Shirt</h4>
-                                <p>Style#: MSTN23456</p>
-                                <p>Colour: Grey</p>
-                                <p class="font--light"><span>Edit</span> | <span>x Remove</span> | <span>Save for Later</span></p>
-                            </div>
-                        </div>
-                    </td>
-                    <td data-th="Size">$1.99</td>
-                    <td data-th="Qty">
-                        <input type="number" class="form-control text-center" value="1">
-                    </td>
-                    <td data-th="Price" class="text-center">$1.99</td>
-                </tr>
+            <tbody id="cart-content">
             </tbody>
         </table>
 
@@ -130,7 +70,35 @@
                 <p class="font--light">Secure Checkout. Shopping is always safe &amp; secure</p>
             </div>
         </div>
+
+        <div class="modal fade" id="editModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body row">
+                <div class="col-xs-6">
+                  <h3>Printed Shirt</h3>
+                  <h1>$39</h1>
+                  <div>
+                    <select></select>
+                    <select></select>
+                  </div>
+                  <button class="btn btn-default" type="button">Edit</button>
+                  <p><a href="#">See Product details</a><p>
+                </div>
+                <div class="col-xs-6">
+                    <img src="assets/T1.jpg" alt="..." class="img-responsive"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 
