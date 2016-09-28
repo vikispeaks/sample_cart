@@ -14,30 +14,30 @@
 
 <body>
     <div class="container">
-        <h1 class="font--dark">Your Shopping Bag</h1>
+        <h1 class="cart--header font--dark">Your Shopping Bag</h1>
 
-        <table id="cart" class="table table-hover table-condensed">
+        <table id="cart" class="table table-condensed">
             <thead>
                 <tr>
                     <th style="width:70%"><span id="item-nos"></span> Items</th>
-                    <th style="width:10%" class="text-center">Size</th>
-                    <th style="width:10%" class="text-center">Qty</th>
-                    <th style="width:10%" class="text-center">Price</th>
+                    <th style="width:10%" class="text-center">SIZE</th>
+                    <th style="width:10%" class="text-center">QTY</th>
+                    <th style="width:10%" class="text-center">PRICE</th>
                 </tr>
             </thead>
             <tbody id="cart-content">
             </tbody>
         </table>
 
-        <div class="row">
-            <div class="col-xs-4">
+        <div class="row cart--summary">
+            <div class="col-xs-4 cart--summary--help">
                 <p>Need help or have Questions</p>
                 <p class="font--light">Call customer care at <a href="tel:18005555555">1800-555-5555</a></p>
                 <p class="font--light">Chat with one of our stylists</p>
-                <p class="font--light">See return and &amp; exchange policy</p>
+                <p class="font--light">See return &amp; exchange policy</p>
             </div>
-            <div class="col-xs-8">
-                <div class="row">
+            <div class="col-xs-8 cart--summary--content">
+                <div class="row cart--summary--code">
                   <span class="col-xs-6 font--light">Enter promotion code or gift card</span>
                   <div class="col-xs-3"><input type="text" class="form-control"></div>
                   <button class="btn btn-default col-xs-3" type="button">Apply</button>
@@ -45,29 +45,31 @@
                 <ul>
                     <li class="row">
                       <p class="col-xs-8">Subtotal</p>
-                      <p class="col-xs-4"> $39.99 </p>
+                      <p id="totalPrice" class="col-xs-4"></p>
                     </li>
                     <li class="row">
-                      <p class="col-xs-8">Subtotal</p>
-                      <p class="col-xs-4"> $39.99 </p>
+                      <p class="col-xs-8">Promotion code JF10 applied</p>
+                      <p id="discountPrice" class="col-xs-4"></p>
                     </li>
                     <li class="row">
-                      <p class="col-xs-8">Subtotal</p>
-                      <p class="col-xs-4"> $39.99 </p>
-                      <p class="col-xs-12 font--light">You qualify for free shipping as your order is above 550</p>
+                      <p class="col-xs-8">Estimated Shipping<sup>*</sup></p>
+                      <p class="col-xs-4">FREE</p>
+                      <p class="col-xs-8 font--light">You don't qualify for free shipping as your order is below $550</p>
                     </li>
                     <li class="row">
                       <p class="col-xs-8">Estimated total</p>
-                      <p class="col-xs-4"> $39.99 </p>
-                      <p class="col-xs-12 font--light">Tax will be applied during checkout</p>
+                      <p id="estimatedPrice" class="col-xs-4"></p>
+                      <p class="col-xs-8 font--light">Tax will be applied during checkout</p>
                     </li>
                 </ul>
-                <div></div>
-                <p>
+                <p class="cart--summary--checkout">
                   <a href="#">Continue Shopping</a>
                   <button class="btn btn-default" type="button">Checkout</button>
                 </p>
-                <p class="font--light">Secure Checkout. Shopping is always safe &amp; secure</p>
+                <p class="font--light row cart--summary--secure">
+                  <img src="assets/lock.jpg" alt="..." class="img-responsive"/>
+                  <span>Secure Checkout. Shopping is always safe &amp; secure</span>
+                </p>
             </div>
         </div>
 
